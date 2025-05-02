@@ -10,14 +10,14 @@ def caesar(original_text, shift_amount,shift_direction):
    final_text = ""
    if shift_direction =="decode":
       shift_amount*=-1
-      for letter in original_text:
-         if letter in alphabet:
-            position = alphabet.index(letter)
-            new_position = (position + shift_amount) % len(alphabet)
-            final_text += alphabet[new_position]
-         else:
-            final_text += letter
-      print(f"The {shift_direction}d text is: {final_text}")
+   for letter in original_text:
+      if letter in alphabet:
+         position = alphabet.index(letter)
+         new_position = (position + shift_amount) % len(alphabet)
+         final_text += alphabet[new_position]
+      else:
+         final_text += letter
+   print(f"The {shift_direction}d text is: {final_text}")
       
 caesar(original_text=text,shift_amount=shift, shift_direction=direction)
 
